@@ -6,11 +6,23 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Image from "next/image";
 import { LoadingPage } from "~/components/loadingSpinner";
+import { useState } from "react";
 
 dayjs.extend(relativeTime);
 
 const CreatePostsWizard = () => {
+  const [input, setInput] = useState("");
+
   const { user } = useUser();
+
+  const ctx = api.useContext();
+
+  const { mutate, isLoading: isPosting } = api.posts.create.useMutation({
+    onSuccess: () => {
+      setInput("");
+      void ctx.posts.getAll.invalidate();
+    },
+  });
 
   if (!user) return null;
 
@@ -24,9 +36,19 @@ const CreatePostsWizard = () => {
         height={56}
       />
       <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         placeholder="type some emojis"
+        disabled={isPosting}
         className="grow bg-transparent outline-none"
       />
+      <button
+        onClick={() => {
+          mutate({ content: input });
+        }}
+      >
+        Post
+      </button>
     </div>
   );
 };
