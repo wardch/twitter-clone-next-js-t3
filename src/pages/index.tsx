@@ -102,7 +102,7 @@ const Home: NextPage = () => {
     <>
       <PageLayout>
         {!isSignedIn && (
-          <div className="flex justify-center">
+          <div className="flex justify-center p-4">
             <SignInButton />
           </div>
         )}
