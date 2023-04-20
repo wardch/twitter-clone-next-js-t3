@@ -1,28 +1,30 @@
-# Create T3 App
+# Emoji Twitter Clone
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A Twitter clone built with TypeScript, Next.js, PlanetScale, Upstash, Tailwind CSS, and Clerk.js. The key difference between this clone and Twitter is that users can only write and read emojis. No other text is allowed.
 
-## What's next? How do I make an app with this?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+DEPLOYED HERE: https://twitter-clone-next-js-t3.vercel.app/
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+![Emoji Twitter Clone Screenshot](screenshot.png) <!-- Replace with a screenshot of your app -->
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Features
 
-## Learn More
+- Create, read tweets
+- Rate limiting using Upstash
+- User authentication with Clerk.js
+- Responsive design with Tailwind CSS
+- Deployed on Vercel. 
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Prerequisites
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- Node.js 14.x
+- npm
+- PlanetScale account and database setup
+- Upstash account and Redis instance
+- Clerk.js account and application setup
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Getting Started
 
-## How do I deploy this?
+1. Clone the repository:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
